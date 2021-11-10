@@ -15,10 +15,12 @@ export default {
   methods: {
     addTodo: function () {
       // this content later!
-      const { id, task } = this;
-      this.$store.commit("addTodo", { id, task });
-      this.id++;
-      this.task = "";
+      if (this.task != "") {
+          const { id, task } = this;
+          this.$store.commit("addTodo", { id, task });
+          this.id++;
+          this.task = "";
+      }
     },
   },
 };
