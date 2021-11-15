@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>To-Do List</h1>
-    <div>Todo count: {{ $store.getters.todoCount }}</div>
+    <div id="count">Todo count: {{ $store.getters.todoCount }}</div>
     <div>
       <TodoNew />
       <TodoList />
@@ -23,7 +23,7 @@ export default {
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
   body {
     padding: 2rem;
@@ -37,6 +37,9 @@ export default {
     color: #fff;
     padding: .2rem .6rem;
     font-size: 2rem;
+  }
+  #count {
+    margin: 1rem 0;
   }
   input {
     padding: .4rem;

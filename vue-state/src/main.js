@@ -12,11 +12,11 @@ import App from './App.vue';
 // open 'src/store/index.js' add code
 
 // 4
-// import store to the current file
+// import store to the current file (main.js)
 // .use store on the app
 
 // 5 
-// clean up boilerplate => delete HelloWorld.vue
+// clean up boilerplate => delete HelloWorld.vue + logo.png
 
 // 6
 // Add new component file => TodoNew.vue

@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="addTodo">
-    <input type="text" placeholder="Enter a new task" v-model="task" />
+    <input type="text" placeholder="Enter a new task" v-model.trim="task" />
   </form>
 </template>
 
@@ -17,7 +17,7 @@ export default {
       // this content later!
       if (this.task != "") {
           const { id, task } = this;
-          this.$store.commit("addTodo", { id, task });
+          this.$store.commit("addTodoItem", { id, task });
           this.id++;
           this.task = "";
       }
