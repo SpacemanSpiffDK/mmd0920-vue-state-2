@@ -28,7 +28,6 @@ export default createStore({
       state.todos = [];
     }
   },
-  // defining store mutations - end
   getters: {
     getTodos: (state) => {
       // return todos where completed is false
@@ -39,7 +38,8 @@ export default createStore({
       return state.todos.filter(todo => todo.completed);
     },
     todoCount: (state) => {
-      return state.todos.length;
+      // return a count of the uncompleted todos length
+      return state.todos.filter(todo => !todo.completed).length;
     }
   }
 });
