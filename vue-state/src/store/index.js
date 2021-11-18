@@ -14,18 +14,29 @@ export default createStore({
       state.todos.unshift(item);
     },
     deleteTodoItem: (state, item) => {
-      // convert proxy to an actual object to work with
-      const data = JSON.parse(JSON.stringify(item)); 
       // find the index of the item with the id we are looking for
-      const i = state.todos.map(todo => todo.id).indexOf(data.todo.id); 
+      const i = state.todos.map(todo => todo.id).indexOf(parseInt(item.item)); 
       // at position i, remove 1 item
       state.todos.splice(i, 1); 
+    },
+    resetAllTodoItems: (state) => {
+      state.todos.forEach(todo => {
+        todo.completed = false;
+      });
+    },
+    removeAllTodoItems: (state) => {
+      state.todos = [];
     }
   },
   // defining store mutations - end
   getters: {
     getTodos: (state) => {
-      return state.todos;
+      // return todos where completed is false
+      return state.todos.filter(todo => !todo.completed);
+    },
+    getDoneTodos: (state) => {
+      // return todos where completed is true
+      return state.todos.filter(todo => todo.completed);
     },
     todoCount: (state) => {
       return state.todos.length;

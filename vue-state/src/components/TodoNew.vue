@@ -10,14 +10,15 @@ export default {
     return {
       task: "",
       id: 0,
+      completed: false
     };
   },
   methods: {
     addTodo: function () {
       // this content later!
       if (this.task != "") {
-          const { id, task } = this;
-          this.$store.commit("addTodoItem", { id, task });
+          const { id, task, completed } = this;
+          this.$store.commit("addTodoItem", { id, task, completed });
           this.id++;
           this.task = "";
       }
@@ -25,3 +26,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  input {
+    width: 100%;
+    font-family: 'Signika', sans-serif;
+  }
+  input {
+    padding: .4rem;
+    font-size: 1rem;
+  }
+</style>
