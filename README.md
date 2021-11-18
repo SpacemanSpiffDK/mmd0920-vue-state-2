@@ -1,2 +1,4 @@
-# mmd0920-vue-state
+# mmd0920-vue-state-2
 For educational purposes
+
+LESSON VERSION!
