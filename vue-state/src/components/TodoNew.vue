@@ -15,7 +15,6 @@ export default {
   },
   methods: {
     addTodo: function () {
-      // this content later!
       if (this.task != "") {
           const { id, task, completed } = this;
           this.$store.commit("addTodoItem", { id, task, completed });

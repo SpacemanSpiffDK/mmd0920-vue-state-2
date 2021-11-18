@@ -4,24 +4,15 @@
     <div id="count">Todo count: {{ $store.getters.todoCount }}</div>
     <div>
       <TodoNew />
-      <TodoList />
-      <TodoListDone />
-      <TodoListManagement />
     </div>
   </div>
 </template>
 <script>
-import TodoNew from "./components/TodoNew.vue";
-import TodoList from "./components/TodoList.vue";
-import TodoListDone from "./components/TodoListDone.vue";
-import TodoListManagement from "./components/TodoListManagement.vue";
+import TodoNew from "./components/TodoNew.vue"
 
 export default {
   components: {
-    TodoNew,
-    TodoList,
-    TodoListDone,
-    TodoListManagement
+    TodoNew
   }
 };
 </script>

@@ -1,24 +1,11 @@
 <template>
-  <table>
-    <tr v-for="todo in todos" :key="todo.id">
-      <td>
-        {{ todo.task }}
-      </td>
-      <td class="itemfunction">
-        <button class="done" @click="todo.completed = true">
-          Done
-        </button>
-      </td>
-    </tr>
-  </table>
+  
 </template>
 
 <script>
 export default {
   computed: {
-    todos() {
-      return this.$store.getters.getTodos;
-    },
+    //
   },
 };
 </script>
