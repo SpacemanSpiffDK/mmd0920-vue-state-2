@@ -27,15 +27,6 @@ export default {
   methods: {
     deleteItem(item) {
       this.$store.commit("deleteTodoItem", { item });
-      },
-    resetAll() {
-      this.$store.commit("resetAllTodoItems");
-    },
-    deleteAll() {
-      const isUserSure = confirm('Are you sure you want to delete all items?');
-      if (isUserSure) {
-        this.$store.commit("removeAllTodoItems");
-      }
     }
   },
 };
