@@ -1,22 +1,17 @@
 import { createStore } from 'vuex';
 
 export default createStore({
-  // defining store state - start
   state() {
     return {
       todos: []
     }
   },
-  // defining store state - end
-  // defining store mutations - start
   mutations: {
     addTodoItem: (state, item) => {
       state.todos.unshift(item);
     },
     deleteTodoItem: (state, item) => {
-      // find the index of the item with the id we are looking for
-      const i = state.todos.map(todo => todo.id).indexOf(parseInt(item.item)); 
-      // at position i, remove 1 item
+      const i = state.todos.findIndex(todo => todo.id == item.item); 
       state.todos.splice(i, 1); 
     },
     resetAllTodoItems: (state) => {
